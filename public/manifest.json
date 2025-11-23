@@ -2,6 +2,5 @@
   "name": "Gemini Encounter Gen",
   "version": "1.0.0",
   "manifest_version": 1,
-  "description": "AI powered encounter generator for Owlbear Rodeo",
-  "requestFramePermissions": []
+  "description": "AI powered encounter generator for Owlbear Rodeo"
 }
