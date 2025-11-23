@@ -3,6 +3,5 @@
   "version": "1.0.0",
   "manifest_version": 1,
   "description": "AI powered encounter generator for Owlbear Rodeo",
-  "background_color": "#222639",
   "requestFramePermissions": []
 }
