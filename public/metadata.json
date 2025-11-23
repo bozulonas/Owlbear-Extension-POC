@@ -1,0 +1,5 @@
+{
+  "name": "OBR Gemini Companion",
+  "description": "A lightweight Owlbear Rodeo extension proof-of-concept powered by Gemini.",
+  "requestFramePermissions": []
+}

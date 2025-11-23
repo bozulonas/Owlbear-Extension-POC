@@ -6,16 +6,13 @@ export default defineConfig({
   plugins: [react()],
   // CRITICAL: Sets the base path to relative (./). 
   // This allows the app to work at https://user.github.io/repo-name/ 
-  // without needing to hardcode the repo name.
   base: './',
   define: {
-    // This allows the code using `process.env.API_KEY` to work in the browser
-    // by replacing it with the environment variables present at build time.
-    'process.env': process.env
+    // CRITICAL FIX: Only inject the specific API_KEY. 
+    // Injecting the whole process.env object causes syntax errors in the browser.
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
   },
   server: {
-    // CRITICAL: This allows Owlbear Rodeo (external origin) to access the manifest and assets
-    // running on your localhost during development.
     cors: {
       origin: "https://www.owlbear.rodeo",
       methods: ["GET", "POST", "OPTIONS"],
