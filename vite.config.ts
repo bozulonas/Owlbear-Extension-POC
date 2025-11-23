@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
-  // CRITICAL: Sets the base path to relative. 
-  // This fixes the 404 errors when deploying to GitHub Pages subdirectories.
+  plugins: [react()],
+  // CRITICAL: Sets the base path to relative (./). 
+  // This allows the app to work at https://user.github.io/repo-name/ 
+  // without needing to hardcode the repo name.
   base: './',
   define: {
     // This allows the code using `process.env.API_KEY` to work in the browser
